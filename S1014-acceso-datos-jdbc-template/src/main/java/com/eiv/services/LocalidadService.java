@@ -37,6 +37,7 @@ public class LocalidadService {
             
     }
     
+    @Transactional
     public LocalidadEntity actualizar(LocalidadDto localidadDto) {
         
         try {
@@ -68,10 +69,12 @@ public class LocalidadService {
         
     }
     
+    @Transactional(readOnly = true)
     public Optional<LocalidadEntity> buscarPorId(Long localidadId) {
         return localidadRepository.findById(localidadId);
     }
     
+    @Transactional
     public void eliminar(Long localidadId) {
         
         try {

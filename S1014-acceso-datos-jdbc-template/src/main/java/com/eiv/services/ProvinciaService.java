@@ -30,6 +30,7 @@ public class ProvinciaService {
 
     }
     
+    @Transactional
     public ProvinciaEntity actualizar(ProvinciaDto provinciaDto) {
         
         try {
@@ -54,10 +55,12 @@ public class ProvinciaService {
         
     }
     
+    @Transactional(readOnly = true)
     public Optional<ProvinciaEntity> buscarPorId(Long provinciaId) {
         return provinciaRepository.findById(provinciaId);
     }
     
+    @Transactional
     public void eliminar(Long provinciaId) {
         
         try {
