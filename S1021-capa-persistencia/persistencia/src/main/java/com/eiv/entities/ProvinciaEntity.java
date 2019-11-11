@@ -1,7 +1,12 @@
 package com.eiv.entities;
 
+import java.util.List;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -9,10 +14,23 @@ import javax.persistence.Table;
 public class ProvinciaEntity {
 
     @Id
+    @Column(name = "provincia_id")
     private Long id;
     
+    @Column(length = 200, nullable = false, unique = true)
     private String nombre;
     
+    @OneToMany(mappedBy = "provincia", fetch = FetchType.LAZY)
+    private List<LocalidadEntity> localidades;
+    
+    public List<LocalidadEntity> getLocalidades() {
+        return localidades;
+    }
+
+    public void setLocalidades(List<LocalidadEntity> localidades) {
+        this.localidades = localidades;
+    }
+
     public ProvinciaEntity() {
     }
 

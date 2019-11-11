@@ -6,6 +6,8 @@
   <persistence-unit name="data-access-hibernate" transaction-type="RESOURCE_LOCAL">
     <class>com.eiv.entities.ProvinciaEntity</class>
     <class>com.eiv.entities.LocalidadEntity</class>
+    <class>com.eiv.entities.BarrioEntity</class>
+    <class>com.eiv.entities.BarrioPkEntity</class>
     <properties>
       <property name="javax.persistence.jdbc.driver" value="org.h2.Driver" />
       <property name="javax.persistence.jdbc.url"    value="jdbc:h2:mem:testdb" />

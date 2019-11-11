@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.eiv</groupId>
+  <artifactId>calculadora-prestamos</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>calculadora-prestamos</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	<maven.compiler.target>1.8</maven.compiler.target>
+	<maven.compiler.source>1.8</maven.compiler.source>
+	
+	<spring.version>2.2.0.RELEASE</spring.version>
+   </properties>
+
+    <dependencies>
+<!-- 	  <dependency> -->
+<!--     	<groupId>org.springframework.boot</groupId> -->
+<!--     	<artifactId>spring-boot-starter</artifactId> -->
+<!--     	<version>${spring.version}</version> -->
+<!-- 	</dependency> -->
+	  
+<!-- 	<dependency> -->
+<!-- 	    <groupId>org.springframework.boot</groupId> -->
+<!-- 	    <artifactId>spring-boot-test</artifactId> -->
+<!-- 	    <version>${spring.version}</version> -->
+<!-- 	    <scope>test</scope> -->
+<!-- 	</dependency> -->
+
+	<dependency>
+    	<groupId>javax.persistence</groupId>
+    	<artifactId>javax.persistence-api</artifactId>
+    	<version>2.2</version>
+	</dependency>
+
+  </dependencies>
+</project>
+ 

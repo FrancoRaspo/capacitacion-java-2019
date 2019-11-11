@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="calculadora-prestamos">
+		<class>com.eiv.entities.ProvinciaEntity</class>
+		<class>com.eiv.entities.PersonaEntity</class>
+		<class>com.eiv.entities.PersonaPkEntity</class>
+		<class>com.eiv.entities.UsuarioEntity</class>
+		<class>com.eiv.entities.TipoDocumentoEntity</class>
+		<class>com.eiv.entities.LocalidadEntity</class>
+		<class>com.eiv.entities.PrestamoEntity</class>
+		<class>com.eiv.entities.LineaEntity</class>
+		<class>com.eiv.entities.PrestamoCuotaPkEntity</class>
+		<class>com.eiv.entities.PrestamoCuotaEntity</class>
+	</persistence-unit>
+</persistence>

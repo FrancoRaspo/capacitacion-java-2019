@@ -3,6 +3,8 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+
+	
 	<groupId>com.eiv</groupId>
 	<artifactId>persistencia</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
@@ -15,13 +17,24 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.target>1.8</maven.compiler.target>
 		<maven.compiler.source>1.8</maven.compiler.source>
-
 		<spring.version>5.2.0.RELEASE</spring.version>
 		<assertj.version>3.13.2</assertj.version>
 	</properties>
 
 	<dependencies>
 
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
+		</dependency>
+		
 	 	<dependency>
     		<groupId>javax.persistence</groupId>
     		<artifactId>javax.persistence-api</artifactId>

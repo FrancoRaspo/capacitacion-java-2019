@@ -1,19 +1,27 @@
 package com.eiv.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "localidades")
+@Table(name = "localidades", uniqueConstraints = 
+        @UniqueConstraint(columnNames = {"provincia_id","nombre"}))
 public class LocalidadEntity {
 
     @Id
+    @Column(name = "localidad_id")
     private long id;
+    
+    @Column(length = 200, nullable = false)
     private String nombre;
     
     @OneToOne
+    @JoinColumn(name = "provincia_id", referencedColumnName = "provincia_id", nullable = false)
     private ProvinciaEntity provincia;
     
     public LocalidadEntity() {
@@ -82,6 +90,9 @@ public class LocalidadEntity {
 
     @Override
     public String toString() {
-        return "LocalidadEntity [id=" + id + ", nombre=" + nombre + "]";
+        return "LocalidadEntity [id=" + id + ", nombre=" + nombre + ", provincia=" + provincia
+                + "]";
     }
+
+    
 }
